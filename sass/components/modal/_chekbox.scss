@@ -1,0 +1,54 @@
+.modal-check-box {
+  margin-bottom: 30px;
+}
+
+.check-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.check-label span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #303030;
+  border-radius: 2px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-ikon {
+  fill: transparent;
+  opacity: 0;
+}
+
+.modal-check:checked + .check-label span {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.modal-check:focus + .check-label span {
+  border-color: #000000;
+}
+
+.modal-check:checked + .check-label .check-ikon {
+  fill: var(--primary-bg-color);
+  opacity: 1;
+}
+
+.contract-link {
+  color: var(--accent-color);
+}
+
+.check-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
