@@ -1,11 +1,13 @@
-@import "./utils/vars";
+@import "./utils/variables";
 @import "./base/reset";
+@import "./base/common";
 @import "./utils/hidden";
 
 @import "./components/section";
 @import "./components/container";
 @import "./components/title";
 @import "./components/subtitle";
+@import "./components/btn";
 @import "./components/modal/backdrop";
 @import "./components/modal/modal-form";
 @import "./components/modal/chekbox";
@@ -19,3 +21,10 @@
 @import "./layout/team/team-list";
 @import "./layout/team/team-soc";
 @import "./layout/clients";
+@import "./layout/footer/page-footer";
+@import "./layout/footer/footer-address";
+@import "./layout/footer/footer-soc";
+@import "./layout/footer/footer-form";
+
+@import "./layout/portfolio/filters";
+@import "./layout/portfolio/project";
