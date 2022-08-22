@@ -1,37 +1,28 @@
 .address-item {
   margin-bottom: 9px;
-}
-
-.address-item:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .main-address {
   display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.71, 0.03em);
   color: var(--second-title-text-color);
   transition: color var(--timing-function);
-}
-
-.main-address:hover,
-.main-address:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .footer-contacts {
   display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(null, 14px, 1.14, 0.02em);
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--timing-function);
-}
-
-.footer-contacts:hover,
-.footer-contacts:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }

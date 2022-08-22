@@ -3,44 +3,33 @@
 }
 
 .check-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(null, 14px, 1.71, 0.03em);
+  @include flex;
   color: var(--primary-text-color);
-}
-
-.check-label span {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #303030;
-  border-radius: 2px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  span {
+    @include flex;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #303030;
+    border-radius: 2px;
+    margin-right: 10px;
+    .modal-check:checked + & {
+      background-color: var(--accent-color);
+      border: none;
+    }
+    .modal-check:focus + & {
+      border-color: #000000;
+    }
+  }
 }
 
 .check-ikon {
   fill: transparent;
   opacity: 0;
-}
-
-.modal-check:checked + .check-label span {
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.modal-check:focus + .check-label span {
-  border-color: #000000;
-}
-
-.modal-check:checked + .check-label .check-ikon {
-  fill: var(--primary-bg-color);
-  opacity: 1;
+  .modal-check:checked + .check-label & {
+    fill: var(--primary-bg-color);
+    opacity: 1;
+  }
 }
 
 .contract-link {
@@ -48,7 +37,5 @@
 }
 
 .check-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex;
 }

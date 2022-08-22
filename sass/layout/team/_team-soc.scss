@@ -1,13 +1,10 @@
 .team-soc {
-  display: flex;
-  justify-content: center;
+  @include flex;
   gap: 10px;
 }
 
 .team-soc-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -15,14 +12,13 @@
   color: #afb1b8;
   transition: background-color var(--timing-function),
     color var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--second-title-text-color);
+  }
 }
 
 .soc-icon {
   fill: currentColor;
-}
-
-.team-soc-link:hover,
-.team-soc-link:focus {
-  background-color: var(--accent-color);
-  color: var(--second-title-text-color);
 }

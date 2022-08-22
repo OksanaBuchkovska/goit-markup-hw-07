@@ -1,3 +1,19 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--timing-function), visibility var(--timing-function);
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -12,6 +28,10 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--timing-function), opacity var(--timing-function);
+  .backdrop.is-hidden & {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
 }
 
 .modal-close {
@@ -25,20 +45,16 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: fill var(--timing-function);
-}
-
-.modal-close:hover,
-.modal-close:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .modal-title {
   margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 1.15, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--first-title-text-color);
 }
 
@@ -48,10 +64,7 @@
 
 .modal-label {
   display: block;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(null, 12px, 1.17, 0.01em);
   color: var(--primary-text-color);
 }
 
@@ -62,21 +75,13 @@
   border-radius: 4px;
   margin-top: 4px;
   padding: 12px 42px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(null, 12px, 1.17, 0.01em);
   outline: transparent;
   color: var(--primary-text-color);
   transition: border-color var(--timing-function);
-}
-
-.modal-input:focus {
-  border-color: #2196f3;
-}
-
-.modal-input:focus + .input-icon {
-  fill: var(--accent-color);
+  &:focus {
+    border-color: #2196f3;
+  }
 }
 
 .input-wrap {
@@ -89,6 +94,9 @@
   top: 50%;
   transform: translateY(-50%);
   transition: fill var(--timing-function);
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal-text {
@@ -104,16 +112,12 @@
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   resize: none;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(null, 12px, 1.17, 0.01em);
   color: var(--primary-text-color);
   outline: transparent;
-}
-
-.textarea-text:focus {
-  border-color: #2196f3;
+  &:focus {
+    border-color: #2196f3;
+  }
 }
 
 .modal-button {
