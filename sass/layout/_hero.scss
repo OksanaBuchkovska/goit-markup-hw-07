@@ -19,7 +19,7 @@
   background-position: center;
 }
 
-.hero-title {
+.hero__title {
   @include font(900, 44px, 1.36, 0.06em);
   max-width: 696px;
   margin: auto;
@@ -28,6 +28,6 @@
   color: var(--second-title-text-color);
 }
 
-.hero-button {
+.hero__button {
   padding: 10px 32px;
 }

@@ -12,11 +12,14 @@
 .footer-logo {
   display: block;
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
-  @include font(700, 26px, 1.19, 0.03em);
-  color: var(--accent-color);
 }
 
-.footer-studio {
+.footer-box {
+  margin-left: 70px;
+}
+
+.footer-title {
+  margin-bottom: 20px;
+  text-align: start;
   color: var(--second-title-text-color);
 }

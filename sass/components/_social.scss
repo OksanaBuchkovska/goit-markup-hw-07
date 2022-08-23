@@ -1,13 +1,26 @@
-.team-soc {
+.social {
   @include flex;
   gap: 10px;
 }
 
-.team-soc-link {
+.social-link {
   @include flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+}
+
+.social-link--color-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--second-title-text-color);
+  transition: background-color var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.social-link--color-dark {
   background-color: var(--primary-bg-color);
   color: #afb1b8;
   transition: background-color var(--timing-function),
@@ -19,6 +32,6 @@
   }
 }
 
-.soc-icon {
+.social-icon {
   fill: currentColor;
 }

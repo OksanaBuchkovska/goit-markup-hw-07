@@ -115,6 +115,7 @@
   @include font(null, 12px, 1.17, 0.01em);
   color: var(--primary-text-color);
   outline: transparent;
+  transition: border-color var(--timing-function);
   &:focus {
     border-color: #2196f3;
   }

@@ -16,14 +16,7 @@
 }
 
 .header-logo {
-  @include font(700, 26px, 1.19, 0.03em);
   margin-right: 93px;
-  font-family: "Raleway", sans-serif;
-  color: var(--accent-color);
-}
-
-.header-studio {
-  color: #000000;
 }
 
 .header-link {
