@@ -1,11 +1,11 @@
-.address-item {
+.address__item {
   margin-bottom: 9px;
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.main-address {
+.address__link {
   display: block;
   @include font(null, 14px, 1.71, 0.03em);
   color: var(--second-title-text-color);
@@ -16,7 +16,7 @@
   }
 }
 
-.footer-contacts {
+.address__contacts {
   display: block;
   @include font(null, 14px, 1.14, 0.02em);
   color: rgba(255, 255, 255, 0.6);

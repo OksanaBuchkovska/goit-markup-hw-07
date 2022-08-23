@@ -2,24 +2,24 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
-}
 
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
+  &-container {
+    display: flex;
+    align-items: baseline;
+  }
 
-.footer-logo {
-  display: block;
-  margin-bottom: 20px;
-}
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
 
-.footer-box {
-  margin-left: 70px;
-}
+  &__box {
+    margin-left: 70px;
+  }
 
-.footer-title {
-  margin-bottom: 20px;
-  text-align: start;
-  color: var(--second-title-text-color);
+  &__title {
+    margin-bottom: 20px;
+    text-align: start;
+    color: var(--second-title-text-color);
+  }
 }

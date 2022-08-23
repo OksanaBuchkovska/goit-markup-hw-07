@@ -3,7 +3,7 @@
   gap: 10px;
 }
 
-.social-link {
+.social__link {
   @include flex;
   width: 44px;
   height: 44px;
@@ -32,6 +32,6 @@
   }
 }
 
-.social-icon {
+.social__icon {
   fill: currentColor;
 }
